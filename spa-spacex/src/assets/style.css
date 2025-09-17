@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0c10;
+    color: #fff;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .card {
+    background: #1f2833;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .detail {
+    padding: 2rem;
+  }
+  
+  .detail img {
+    width: 150px;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .not-found {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .btn-home {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #45a29e;
+    color: #100b0d;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  
+  .status {
+    padding: 1rem;
+    text-align: center;
+    color: #c5c6c7;
+  }
+  
+  .status.error {
+    color: #ff6b6b;
+  }
+  
