@@ -135,12 +135,6 @@ El proyecto incluye un dataset realista con:
 - Información clara: duración, disponibilidad
 - Botón "Buscar de nuevo" para probar otros presupuestos
 
-## 👥 Equipo
-
-**Desarrollador**: Santino Dacuy
-**Curso**: Programación Avanzada - 3er año
-**Institución**: Licenciatura en Sistemas
-
 ## 📄 Licencia
 
 MIT License - Proyecto académico
