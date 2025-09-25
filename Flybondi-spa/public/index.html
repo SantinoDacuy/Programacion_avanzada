@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Vacaciones Ideales - Flybondi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>✈️ Mis Vacaciones Ideales</h1>
+                <p class="subtitle">Encontrá el mejor destino para tu presupuesto</p>
+            </div>
+        </header>
+
+        <main>
+            <!-- Sección de búsqueda -->
+            <section class="search-section">
+                <div class="welcome-message">
+                    <h2>¡Hola! 👋</h2>
+                    <p>Decinos cuánto querés gastar y te mostramos los mejores destinos para vos.</p>
+                </div>
+
+                <form id="searchForm" class="search-form">
+                    <div class="form-group">
+                        <label for="budget">¿Cuánto querés gastar en total?</label>
+                        <div class="input-wrapper">
+                            <span class="currency">$</span>
+                            <input type="number" id="budget" name="budget" value="800" min="100" max="5000" step="50">
+                        </div>
+                        <small>Incluye ida y vuelta para todos los pasajeros</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passengers">¿Cuántos van a viajar?</label>
+                        <select id="passengers" name="passengers">
+                            <option value="1">Solo yo</option>
+                            <option value="2">2 personas</option>
+                            <option value="3">3 personas</option>
+                            <option value="4">4 personas</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="search-btn" id="searchBtn">
+                        🔍 Buscar mis vacaciones ideales
+                    </button>
+                </form>
+            </section>
+
+            <!-- Loading -->
+            <section id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <h3>Buscando las mejores opciones...</h3>
+                <p>Estamos encontrando los vuelos perfectos para tu presupuesto</p>
+            </section>
+
+            <!-- Resultados -->
+            <section id="results" class="results-section hidden">
+                <div class="results-header">
+                    <h2>🎉 ¡Encontramos opciones para vos!</h2>
+                    <p id="resultsCount">Resultados encontrados</p>
+                </div>
+                <div id="vacationsList" class="vacations-list">
+                    <!-- Las vacaciones se cargarán aquí dinámicamente -->
+                </div>
+                <div class="results-footer">
+                    <button class="search-again-btn" onclick="showSearchAgain()">
+                        🔄 Buscar de nuevo
+                    </button>
+                </div>
+            </section>
+
+            <!-- Sin resultados -->
+            <section id="noResults" class="no-results hidden">
+                <div class="empty-state">
+                    <h3>😔 No encontramos opciones</h3>
+                    <p>Con tu presupuesto actual no hay vuelos disponibles.</p>
+                    <p>Te sugerimos:</p>
+                    <ul style="text-align: left; display: inline-block; margin: 1rem 0;">
+                        <li>Aumentar tu presupuesto</li>
+                        <li>Reducir el número de pasajeros</li>
+                        <li>Buscar en otras fechas</li>
+                    </ul>
+                    <button class="search-again-btn" onclick="showSearchAgain()">
+                        🔄 Intentar de nuevo
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>💡 Consejo: Los precios pueden variar según la disponibilidad</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
