@@ -1,0 +1,67 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts",
+    ".next\\dev/types/**/*.ts",
+    ".next\\dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+
+/**
+ * 🎯 RESUMEN EJECUTIVO:
+ * 
+ * TSCONFIG.JSON = El "MANUAL DE INSTRUCCIONES" para TypeScript
+ * 
+ * Le dice a TypeScript:
+ * - "Cómo compilar el código"
+ * - "Qué características de JavaScript permitir"  
+ * - "Dónde encontrar los archivos"
+ * - "Qué reglas seguir"
+ * 
+ * 💡 SIN ESTE ARCHIVO:
+ * - TypeScript no sabría cómo comportarse
+ * - Tendrías errores por todas partes
+ * - Next.js no funcionaría bien
+ * 
+ * 🔧 EN ESTE PROYECTO BANCARIO:
+ * - Garantiza que todo el código sea consistente
+ * - Permite usar TypeScript en React (JSX)
+ * - Hace que los imports con @/ funcionen
+ * - Acelera el desarrollo con compilación rápida
+ */
